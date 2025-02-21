@@ -8,7 +8,6 @@ import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Github } from "lucide-react";
-import Image from "next/image";
 import { LineShadowText } from "@/components/ui/line-shadow-text";
 import { useTheme } from "next-themes";
 
