@@ -59,7 +59,7 @@ const HomePage = () => {
     const fetchTransactions = async () => {
       try {
         const response = await axios.get(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/getalltransaction`
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}api/getalltransaction`
         );
         setTransactions(response.data);
 
@@ -125,7 +125,7 @@ const HomePage = () => {
 
   const handleDelete = async (id: number) => {
     try {
-      await axios.delete(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/deletetransaction/${id}`);
+      await axios.delete(`${process.env.NEXT_PUBLIC_BACKEND_URL}api/deletetransaction/${id}`);
       setTransactions((prev) => prev.filter((transaction) => transaction._id !== id));
       console.log(`Transaction with id ${id} deleted successfully.`);
       window.location.reload();
@@ -146,7 +146,7 @@ const HomePage = () => {
     try {
       if (isEditMode && currentEditId !== null) {
         const response = await axios.put(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/edittransaction/${currentEditId}`,
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}api/edittransaction/${currentEditId}`,
           newTransaction
         );
         const updatedTransaction = response.data.updatedTransaction;
@@ -157,7 +157,7 @@ const HomePage = () => {
         );
       } else {
         const response = await axios.post(
-          `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/addtransaction`,
+          `${process.env.NEXT_PUBLIC_BACKEND_URL}api/addtransaction`,
           newTransaction
         );
         const addedTransaction = response.data.transaction;
