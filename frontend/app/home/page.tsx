@@ -82,7 +82,7 @@ const HomePage = () => {
   }, []);
 
   const validateForm = () => {
-    let errors = { title: "", amount: "", date: "" };
+    const errors = { title: "", amount: "", date: "" };
     let isValidForm = true;
 
     if (!newTransaction.title.trim()) {
