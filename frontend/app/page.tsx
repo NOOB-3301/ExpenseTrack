@@ -49,7 +49,7 @@ const HomePage = () => {
                   </Button>
                 </Link>
                 <a
-                  href="https://github.com/mukundsolanki/FinTrack"
+                  href="https://github.com/NOOB-3301/ExpenseTrack"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -90,18 +90,10 @@ const HomePage = () => {
           {/* Footer */}
           <footer className="text-center text-base text-gray-600 py-4 flex-shrink-0">
             <p>
-              © 2025 FinTrack. {" "}
+              © 2025 ExpanseTrack. {" "}
+               Contribute on {" "}
               <a
-                href="https://github.com/mukundsolanki/FinTrack/blob/main/LICENSE"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                MIT Licensed
-              </a>
-              . Contribute on {" "}
-              <a
-                href="https://github.com/mukundsolanki/FinTrack"
+                href="https://github.com/NOOB-3301/ExpenseTrack"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-600 hover:underline"

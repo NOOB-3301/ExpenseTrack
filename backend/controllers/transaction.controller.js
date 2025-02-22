@@ -29,10 +29,6 @@ export const editTransaction = async (req, res) => {
     const { id } = req.params;
     const { amount, title, date } = req.body;
 
-    // Validate ID
-    if (!isValidObjectId(id)) {
-      return res.status(400).json({ message: 'Invalid transaction ID.' });
-    }
 
     const updatedTransaction = await Transaction.findByIdAndUpdate(
       id,
@@ -55,7 +51,7 @@ export const editTransaction = async (req, res) => {
 export const deleteTransaction = async (req, res) => {
   try {
     const { id } = req.params;
-
+    console.log(id)
     const deletedTransaction = await Transaction.findByIdAndDelete(id);
 
     if (!deletedTransaction) {
